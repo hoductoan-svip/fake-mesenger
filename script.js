@@ -100,8 +100,15 @@ function loadMessages() {
             messagesDiv.appendChild(messageElement);
         });
 
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        // Cuộn xuống cuối
+        scrollToBottom();
     });
+}
+
+// Hàm cuộn xuống cuối
+function scrollToBottom() {
+    const messagesDiv = document.getElementById('messages');
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
 
 // Lắng nghe trạng thái đăng nhập
